@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html
+  class="loading dark-layout"
+  lang="en"
+  data-layout="dark-layout"
+  data-textdirection="ltr"
+>
+  <!-- BEGIN: Head-->
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui"
+    />
+    <title>ToDo</title>
+    <link
+      rel="apple-touch-icon"
+      href="../app-assets/images/ico/apple-icon-120.png"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../app-assets/images/ico/favicon.ico"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
+      rel="stylesheet"
+    />
+
+    <!-- BEGIN: Vendor CSS-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/vendors/css/vendors.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/fonts/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/vendors/css/editors/quill/katex.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/vendors/css/editors/quill/monokai-sublime.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/vendors/css/editors/quill/quill.snow.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/vendors/css/forms/select/select2.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/vendors/css/extensions/dragula.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/vendors/css/extensions/toastr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/vendors/css/extensions/sweetalert2.min.css"
+    />
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/css/bootstrap-extended.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/css/colors.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/css/components.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/css/themes/dark-layout.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/css/themes/bordered-layout.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/css/themes/semi-dark-layout.css"
+    />
+
+    <!-- BEGIN: Page CSS-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/css/core/menu/menu-types/horizontal-menu.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/css/plugins/forms/form-quill-editor.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/css/plugins/forms/pickers/form-flat-pickr.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/css/plugins/extensions/ext-component-toastr.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/css/plugins/extensions/ext-component-sweet-alerts.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/css/plugins/forms/form-validation.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../app-assets/css/pages/app-todo.css"
+    />
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+    <!-- END: Custom CSS-->
+  </head>
+  <!-- END: Head-->
+
+  <!-- BEGIN: Body-->
+
+  <body
+    class="
+      horizontal-layout horizontal-menu
+      content-left-sidebar
+      navbar-floating
+      footer-static
+    "
+    data-open="hover"
+    data-menu="horizontal-menu"
+    data-col="content-left-sidebar"
+  >
+    <!-- BEGIN: Header-->
+    <nav
+      class="
+        header-navbar
+        navbar-expand-lg navbar navbar-fixed
+        align-items-center
+        navbar-shadow navbar-brand-center
+      "
+      data-nav="brand-center"
+    >
+      <div class="navbar-header d-xl-block d-none">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a
+              class="navbar-brand"
+              href="html/ltr/horizontal-menu-template-dark/index.html"
+              ><span class="brand-logo">
+                <svg
+                  viewbox="0 0 139 95"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  height="24"
+                >
+                  <defs>
+                    <lineargradient
+                      id="linearGradient-1"
+                      x1="100%"
+                      y1="10.5120544%"
+                      x2="50%"
+                      y2="89.4879456%"
+                    >
+                      <stop stop-color="#000000" offset="0%"></stop>
+                      <stop stop-color="#FFFFFF" offset="100%"></stop>
+                    </lineargradient>
+                    <lineargradient
+                      id="linearGradient-2"
+                      x1="64.0437835%"
+                      y1="46.3276743%"
+                      x2="37.373316%"
+                      y2="100%"
+                    >
+                      <stop
+                        stop-color="#EEEEEE"
+                        stop-opacity="0"
+                        offset="0%"
+                      ></stop>
+                      <stop stop-color="#FFFFFF" offset="100%"></stop>
+                    </lineargradient>
+                  </defs>
+                  <g
+                    id="Page-1"
+                    stroke="none"
+                    stroke-width="1"
+                    fill="none"
+                    fill-rule="evenodd"
+                  >
+                    <g
+                      id="Artboard"
+                      transform="translate(-400.000000, -178.000000)"
+                    >
+                      <g
+                        id="Group"
+                        transform="translate(400.000000, 178.000000)"
+                      >
+                        <path
+                          class="text-primary"
+                          id="Path"
+                          d="M-5.68434189e-14,2.84217094e-14 L39.1816085,2.84217094e-14 L69.3453773,32.2519224 L101.428699,2.84217094e-14 L138.784583,2.84217094e-14 L138.784199,29.8015838 C137.958931,37.3510206 135.784352,42.5567762 132.260463,45.4188507 C128.736573,48.2809251 112.33867,64.5239941 83.0667527,94.1480575 L56.2750821,94.1480575 L6.71554594,44.4188507 C2.46876683,39.9813776 0.345377275,35.1089553 0.345377275,29.8015838 C0.345377275,24.4942122 0.230251516,14.560351 -5.68434189e-14,2.84217094e-14 Z"
+                          style="fill: currentColor"
+                        ></path>
+                        <path
+                          id="Path1"
+                          d="M69.3453773,32.2519224 L101.428699,1.42108547e-14 L138.784583,1.42108547e-14 L138.784199,29.8015838 C137.958931,37.3510206 135.784352,42.5567762 132.260463,45.4188507 C128.736573,48.2809251 112.33867,64.5239941 83.0667527,94.1480575 L56.2750821,94.1480575 L32.8435758,70.5039241 L69.3453773,32.2519224 Z"
+                          fill="url(#linearGradient-1)"
+                          opacity="0.2"
+                        ></path>
+                        <polygon
+                          id="Path-2"
+                          fill="#000000"
+                          opacity="0.049999997"
+                          points="69.3922914 32.4202615 32.8435758 70.5039241 54.0490008 16.1851325"
+                        ></polygon>
+                        <polygon
+                          id="Path-21"
+                          fill="#000000"
+                          opacity="0.099999994"
+                          points="69.3922914 32.4202615 32.8435758 70.5039241 58.3683556 20.7402338"
+                        ></polygon>
+                        <polygon
+                          id="Path-3"
+                          fill="url(#linearGradient-2)"
+                          opacity="0.099999994"
+                          points="101.428699 0 83.0667527 94.1480575 130.378721 47.0740288"
+                        ></polygon>
+                      </g>
+                    </g>
+                  </g></svg
+              ></span>
+              <h2 class="brand-text mb-0">Notee</h2>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-container d-flex content">
+        <div class="bookmark-wrapper d-flex align-items-center">
+          <ul class="nav navbar-nav d-xl-none">
+            <li class="nav-item">
+              <a class="nav-link menu-toggle" href="javascript:void(0);"
+                ><i class="ficon" data-feather="menu"></i
+              ></a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link nav-link-style"
+                ><i class="ficon" data-feather="sun"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <ul class="nav navbar-nav align-items-center ml-auto">
+          <li class="nav-item dropdown dropdown-user">
+            <a
+              class="nav-link dropdown-toggle dropdown-user-link"
+              id="dropdown-user"
+              href="javascript:void(0);"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <div class="user-nav d-sm-flex d-none">
+                <span class="user-name font-weight-bolder">John Doe</span
+                ><span class="user-status">Admin</span>
+              </div>
+              <span class="avatar"
+                ><img
+                  class="round"
+                  src="../app-assets//images/portrait/small/avatar-s-11.jpg"
+                  alt="avatar"
+                  height="40"
+                  width="40" /><span class="avatar-status-online"></span
+              ></span>
+            </a>
+            <div
+              class="dropdown-menu dropdown-menu-right"
+              aria-labelledby="dropdown-user"
+            >
+              <a class="dropdown-item" href="javascript:void(0);"
+                ><i class="mr-50" data-feather="user"></i> Profile</a
+              ><a class="dropdown-item" href="javascript:void(0);"
+                ><i class="mr-50" data-feather="mail"></i> Inbox</a
+              ><a class="dropdown-item" href="javascript:void(0);"
+                ><i class="mr-50" data-feather="check-square"></i> Task</a
+              ><a class="dropdown-item" href="javascript:void(0);"
+                ><i class="mr-50" data-feather="message-square"></i> Chats</a
+              >
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="javascript:void(0);"
+                ><i class="mr-50" data-feather="settings"></i> Settings</a
+              ><a class="dropdown-item" href="javascript:void(0);"
+                ><i class="mr-50" data-feather="credit-card"></i> Pricing</a
+              ><a class="dropdown-item" href="javascript:void(0);"
+                ><i class="mr-50" data-feather="help-circle"></i> FAQ</a
+              ><a class="dropdown-item" href="javascript:void(0);"
+                ><i class="mr-50" data-feather="power"></i> Logout</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- END: Header-->
+
+    <!-- BEGIN: Main Menu-->
+    <div class="horizontal-menu-wrapper">
+      <div
+        class="
+          header-navbar
+          navbar-expand-sm navbar navbar-horizontal
+          floating-nav
+          navbar-dark navbar-shadow
+          menu-border
+        "
+        role="navigation"
+        data-menu="menu-wrapper"
+        data-menu-type="floating-nav"
+      >
+        <div class="navbar-header">
+          <ul class="nav navbar-nav flex-row">
+            <li class="nav-item mr-auto">
+              <a
+                class="navbar-brand"
+                href="../html/ltr/horizontal-menu-template-dark/index.html"
+                ><span class="brand-logo">
+                  <svg
+                    viewbox="0 0 139 95"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    height="24"
+                  >
+                    <defs>
+                      <lineargradient
+                        id="linearGradient-1"
+                        x1="100%"
+                        y1="10.5120544%"
+                        x2="50%"
+                        y2="89.4879456%"
+                      >
+                        <stop stop-color="#000000" offset="0%"></stop>
+                        <stop stop-color="#FFFFFF" offset="100%"></stop>
+                      </lineargradient>
+                      <lineargradient
+                        id="linearGradient-2"
+                        x1="64.0437835%"
+                        y1="46.3276743%"
+                        x2="37.373316%"
+                        y2="100%"
+                      >
+                        <stop
+                          stop-color="#EEEEEE"
+                          stop-opacity="0"
+                          offset="0%"
+                        ></stop>
+                        <stop stop-color="#FFFFFF" offset="100%"></stop>
+                      </lineargradient>
+                    </defs>
+                    <g
+                      id="Page-1"
+                      stroke="none"
+                      stroke-width="1"
+                      fill="none"
+                      fill-rule="evenodd"
+                    >
+                      <g
+                        id="Artboard"
+                        transform="translate(-400.000000, -178.000000)"
+                      >
+                        <g
+                          id="Group"
+                          transform="translate(400.000000, 178.000000)"
+                        >
+                          <path
+                            class="text-primary"
+                            id="Path"
+                            d="M-5.68434189e-14,2.84217094e-14 L39.1816085,2.84217094e-14 L69.3453773,32.2519224 L101.428699,2.84217094e-14 L138.784583,2.84217094e-14 L138.784199,29.8015838 C137.958931,37.3510206 135.784352,42.5567762 132.260463,45.4188507 C128.736573,48.2809251 112.33867,64.5239941 83.0667527,94.1480575 L56.2750821,94.1480575 L6.71554594,44.4188507 C2.46876683,39.9813776 0.345377275,35.1089553 0.345377275,29.8015838 C0.345377275,24.4942122 0.230251516,14.560351 -5.68434189e-14,2.84217094e-14 Z"
+                            style="fill: currentColor"
+                          ></path>
+                          <path
+                            id="Path1"
+                            d="M69.3453773,32.2519224 L101.428699,1.42108547e-14 L138.784583,1.42108547e-14 L138.784199,29.8015838 C137.958931,37.3510206 135.784352,42.5567762 132.260463,45.4188507 C128.736573,48.2809251 112.33867,64.5239941 83.0667527,94.1480575 L56.2750821,94.1480575 L32.8435758,70.5039241 L69.3453773,32.2519224 Z"
+                            fill="url(#linearGradient-1)"
+                            opacity="0.2"
+                          ></path>
+                          <polygon
+                            id="Path-2"
+                            fill="#000000"
+                            opacity="0.049999997"
+                            points="69.3922914 32.4202615 32.8435758 70.5039241 54.0490008 16.1851325"
+                          ></polygon>
+                          <polygon
+                            id="Path-21"
+                            fill="#000000"
+                            opacity="0.099999994"
+                            points="69.3922914 32.4202615 32.8435758 70.5039241 58.3683556 20.7402338"
+                          ></polygon>
+                          <polygon
+                            id="Path-3"
+                            fill="url(#linearGradient-2)"
+                            opacity="0.099999994"
+                            points="101.428699 0 83.0667527 94.1480575 130.378721 47.0740288"
+                          ></polygon>
+                        </g>
+                      </g>
+                    </g></svg
+                ></span>
+                <h2 class="brand-text mb-0">Vuexy</h2>
+              </a>
+            </li>
+            <li class="nav-item nav-toggle">
+              <a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"
+                ><i
+                  class="
+                    d-block d-xl-none
+                    text-primary
+                    toggle-icon
+                    font-medium-4
+                  "
+                  data-feather="x"
+                ></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="shadow-bottom"></div>
+        <!-- Horizontal menu content-->
+        <div
+          class="navbar-container main-menu-content"
+          data-menu="menu-container"
+        >
+          <!-- include includes/mixins-->
+          <ul
+            class="nav navbar-nav"
+            id="main-menu-navigation"
+            data-menu="menu-navigation"
+          >
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center" href="../index.html"
+                ><i data-feather="home"></i
+                ><span data-i18n="Home">Home</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link d-flex align-items-center" href="app-todo.html"
+                ><i data-feather="list"></i
+                ><span data-i18n="Notes">Notes</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- END: Main Menu-->
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content todo-application">
+      <div class="content-overlay"></div>
+      <div class="header-navbar-shadow"></div>
+      <div class="content-area-wrapper">
+        <div class="sidebar-left">
+          <div class="sidebar">
+            <div class="sidebar-content todo-sidebar">
+              <div class="todo-app-menu">
+                <div class="add-task">
+                  <button
+                    id="add-todo-btn"
+                    type="button"
+                    class="btn btn-primary btn-block"
+                    data-toggle="modal"
+                  >
+                    Add Task
+                  </button>
+                </div>
+                <div class="sidebar-menu-list">
+                  <div class="list-group list-group-filters">
+                    <a
+                    id="filter-task"
+                      href="javascript:void(0)"
+                      class="list-group-item list-group-item-action active"
+                    >
+                      <i data-feather="mail" class="font-medium-3 mr-50"></i>
+                      <span class="align-middle"> Active Task</span>
+                    </a>
+                    <a
+                    id="filter-important"
+                      href="javascript:void(0)"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i data-feather="star" class="font-medium-3 mr-50"></i>
+                      <span class="align-middle">Important</span>
+                    </a>
+                    <a
+                    id="filter-completed"
+                      href="javascript:void(0)"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i data-feather="check" class="font-medium-3 mr-50"></i>
+                      <span class="align-middle">Completed</span>
+                    </a>
+                    <a
+                    id="filter-deleted"
+                      href="javascript:void(0)"
+                      class="list-group-item list-group-item-action"
+                    >
+                      <i data-feather="trash" class="font-medium-3 mr-50"></i>
+                      <span class="align-middle">Deleted</span>
+                    </a>
+                  </div>
+                  <div class="mt-3 px-2 d-flex justify-content-between">
+                    <h6 class="section-label mb-1">Tags</h6>
+                    <i data-feather="plus" class="cursor-pointer"></i>
+                  </div>
+                  <div class="list-group list-group-labels">
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        list-group-item list-group-item-action
+                        d-flex
+                        align-items-center
+                      "
+                    >
+                      <span class="bullet bullet-sm bullet-primary mr-1"></span
+                      >Team
+                    </a>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        list-group-item list-group-item-action
+                        d-flex
+                        align-items-center
+                      "
+                    >
+                      <span class="bullet bullet-sm bullet-success mr-1"></span
+                      >Low
+                    </a>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        list-group-item list-group-item-action
+                        d-flex
+                        align-items-center
+                      "
+                    >
+                      <span class="bullet bullet-sm bullet-warning mr-1"></span
+                      >Medium
+                    </a>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        list-group-item list-group-item-action
+                        d-flex
+                        align-items-center
+                      "
+                    >
+                      <span class="bullet bullet-sm bullet-danger mr-1"></span
+                      >High
+                    </a>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        list-group-item list-group-item-action
+                        d-flex
+                        align-items-center
+                      "
+                    >
+                      <span class="bullet bullet-sm bullet-info mr-1"></span
+                      >Update
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-right">
+          <div class="content-wrapper">
+            <div class="content-header row"></div>
+            <div class="content-body">
+              <div class="body-content-overlay"></div>
+              <div class="todo-app-list">
+                <!-- Todo search starts -->
+                <div class="app-fixed-search d-flex align-items-center">
+                  <div class="sidebar-toggle d-block d-lg-none ml-1">
+                    <i data-feather="menu" class="font-medium-5"></i>
+                  </div>
+                  <div
+                    class="
+                      d-flex
+                      align-content-center
+                      justify-content-between
+                      w-100
+                    "
+                  >
+                    <div class="input-group input-group-merge">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"
+                          ><i data-feather="search" class="text-muted"></i
+                        ></span>
+                      </div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="todo-search"
+                        placeholder="Search task"
+                        aria-label="Search..."
+                        aria-describedby="todo-search"
+                      />
+                    </div>
+                  </div>
+                  
+                    <button id="empty-trash" type="button" class="btn btn-icon btn-icon btn-sm btn-outline-danger waves-effect mr-1" style="display: none;">
+                      <i class="text-danger fa fa-trash"></i>
+                    </button>  
+                 
+                  <div class="dropdown">
+                    <a
+                      href="javascript:void(0);"
+                      class="dropdown-toggle hide-arrow mr-1"
+                      id="todoActions"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i
+                        data-feather="more-vertical"
+                        class="font-medium-2 text-body"
+                      ></i>
+                    </a>
+                    <div
+                      class="dropdown-menu dropdown-menu-right"
+                      aria-labelledby="todoActions"
+                    >
+                      <a
+                        class="dropdown-item sort-asc"
+                        href="javascript:void(0)"
+                        >Sort A - Z</a
+                      >
+                      <a
+                        class="dropdown-item sort-desc"
+                        href="javascript:void(0)"
+                        >Sort Z - A</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0)"
+                        >Sort Assignee</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0)"
+                        >Sort Due Date</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0)"
+                        >Sort Today</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0)"
+                        >Sort 1 Week</a
+                      >
+                      <a class="dropdown-item" href="javascript:void(0)"
+                        >Sort 1 Month</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- Todo search ends -->
+
+                <!-- Todo List starts -->
+                <div class="todo-task-list-wrapper list-group">
+                  <ul class="todo-task-list media-list" id="todo-task-list">
+                    <!-- 
+                    ===============================
+                    START: TODO ITEM
+                    ===============================
+                    -->
+                    <!-- 
+                    ===============================
+                    END: TODO ITEM
+                    ===============================
+                    -->
+                  </ul>
+                </div>
+                <!-- Todo List ends -->
+              </div>
+
+              <!-- Right Sidebar starts -->
+              <div
+                class="modal fade text-left show center-todo-modal"
+                id="new-task-modal"
+                tabindex="-1"
+                style="display: none"
+                aria-labelledby="myModalLabel1"
+                style="display: block; padding-right: 17px"
+                aria-modal="true"
+                data-backdrop="static"
+                data-keyboard="false"
+                role="dialog"
+              >
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span id="close-modal" aria-hidden="true">×</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="card">
+                        <div class="card-header">
+                          <h4 id="create-note-header" class="card-title">
+                            Create a Note
+                          </h4>
+                        </div>
+                        <div class="card-body">
+                          <!-- 
+                          ===============================
+                          START: FORM
+                          ===============================
+                        -->
+                          <form
+                            method="POST"
+                            id="form-modal-note"
+                            class="form form-vertical"
+                          >
+                            <input type="hidden" id="note-id" name="note-id" />
+                            <div id="section-block">
+                              <div class="row">
+                                <div class="col-12">
+                                  <div
+                                    class="form-group"
+                                    novalidate="novalidate"
+                                  >
+                                    <label for="first-name-icon">Title</label>
+                                    <div class="input-group input-group-merge">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text"
+                                          ><svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            class="feather feather-user"
+                                          >
+                                            <path
+                                              d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+                                            ></path>
+                                            <circle
+                                              cx="12"
+                                              cy="7"
+                                              r="4"
+                                            ></circle></svg
+                                        ></span>
+                                      </div>
+                                      <input
+                                        type="text"
+                                        id="title"
+                                        class="form-control"
+                                        name="title"
+                                        placeholder="Note Title"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-group">
+                                    <label for="task-due-date" class="form-label">Due Date</label>
+                                    <input type="text" class="form-control task-due-date flatpickr-input active" id="dueDate" name="dueDate" readonly="readonly" aria-invalid="false">
+                                </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-group">
+                                    <label for="description">Description</label>
+                                    <textarea
+                                      class="form-control"
+                                      id="description"
+                                      name="description"
+                                      id="description"
+                                      rows="3"
+                                      placeholder="Description"
+                                    ></textarea>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                  <div class="form-group">
+                                      <div id="check-important" class="custom-control custom-checkbox">
+                                          <input type="checkbox"  class="custom-control-input" id="customCheck2">
+                                          <label class="custom-control-label" for="customCheck2">Mark as Important</label>
+                                      </div>
+                                  </div>
+                              </div>
+                                <div class="col-12 d-flex justify-content-end">
+                                  <button
+                                    id="submit-note"
+                                    type="submit"
+                                    class="
+                                      btn btn-primary
+                                      mr-1
+                                      waves-effect waves-float waves-light
+                                    "
+                                  >
+                                    Create
+                                  </button>
+                                  <button
+                                    id="update-note"
+                                
+                                    class="
+                                      btn btn-primary
+                                      mr-1
+                                      waves-effect waves-float waves-light
+                                     
+                                    "
+                                  >
+                                    Update
+                                  </button>
+                                  <button
+                                    type="reset"
+                                    id="form-reset-btn"
+                                    class="
+                                      btn btn-outline-secondary
+                                      waves-effect
+                                    "
+                                  >
+                                    Reset
+                                  </button>
+                                  <button
+                                    id="cancel-modal-btn"
+                                    type="button"
+                                    class="btn btn-outline-warning d-none"
+                                    data-dismiss="modal"
+                                  >
+                                    Cancel
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                          <!-- 
+                                                    ===============================
+                                                    END: FORM
+                                                    ===============================
+                                                 -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Right Sidebar ends -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END: Content-->
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+    <footer class="footer footer-static footer-light footer-shadow">
+      <p class="clearfix mb-0">
+        <span class="float-md-left d-block d-md-inline-block mt-25"
+          >COPYRIGHT &copy; 2021 <span class="d-none d-sm-inline-block"></span>
+             All rights Reserved</span
+          ></span
+        ><span class="float-md-right d-none d-md-block"
+          >Hand-crafted & Made with<i data-feather="heart"></i
+        ></span>
+      </p>
+    </footer>
+    <button class="btn btn-primary btn-icon scroll-top" type="button">
+      <i data-feather="arrow-up"></i>
+    </button>
+    <!-- END: Footer-->
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="../app-assets/vendors/js/vendors.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="../app-assets/vendors/js/ui/jquery.sticky.js"></script>
+    <script src="../app-assets/vendors/js/editors/quill/katex.min.js"></script>
+    <script src="../app-assets/vendors/js/editors/quill/highlight.min.js"></script>
+    <script src="../app-assets/vendors/js/editors/quill/quill.min.js"></script>
+    <script src="../app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="../app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+    <script src="../app-assets/vendors/js/extensions/dragula.min.js"></script>
+    <script src="../app-assets/vendors/js/forms/validation/jquery.validate.min.js"></script>
+    <script src="../app-assets/vendors/js/extensions/toastr.min.js"></script>
+    <script src="../app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="../app-assets/js/core/app-menu.js"></script>
+    <script src="../app-assets/js/core/app.js"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="../src/js/core/script.js"></script>
+    <!-- END: Page JS-->
+
+    <script>
+      $(window).on('load', function () {
+        if (feather) {
+          feather.replace({
+            width: 14,
+            height: 14,
+          });
+        }
+      });
+    </script>
+  </body>
+  <!-- END: Body-->
+</html>
